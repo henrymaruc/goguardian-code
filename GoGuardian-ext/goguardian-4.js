@@ -1,0 +1,1 @@
+(()=>{"use strict";const a="haldlgldplgnggkjaafhelgiaglafanh";window._docs_force_html_by_ext=a,window._docs_annotate_canvas_by_ext=a})();

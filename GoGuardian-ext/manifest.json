@@ -1,0 +1,405 @@
+{
+  "manifest_version": 3,
+  "name": "GoGuardian",
+  "version": "4.1.249",
+  "action": {
+    "default_icon": {
+      "16": "icons/static-light-16.png",
+      "32": "icons/static-light-32.png",
+      "48": "icons/static-light-48.png",
+      "128": "icons/static-light-128.png"
+    },
+    "default_title": "GoGuardian"
+  },
+  "icons": {
+    "16": "icons/static-light-16.png",
+    "32": "icons/static-light-32.png",
+    "48": "icons/static-light-48.png",
+    "128": "icons/static-light-128.png"
+  },
+  "background": {
+    "service_worker": "./background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "https://secure.aleks.com/*",
+        "*://*.erplinq.com/*",
+        "*://esd.eschooldata.com/*"
+      ],
+      "js": [
+        "goguardian-1.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "match_about_blank": true
+    },
+    {
+      "matches": [
+        "*://docs.google.com/*"
+      ],
+      "js": [
+        "goguardian-2.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "https://secure.aleks.com/*"
+      ],
+      "js": [
+        "goguardian-3.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "*://docs.google.com/*"
+      ],
+      "js": [
+        "goguardian-4.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "*://*.erplinq.com/*",
+        "*://esd.eschooldata.com/*"
+      ],
+      "js": [
+        "goguardian-5.js"
+      ],
+      "run_at": "document_idle",
+      "match_about_blank": true
+    },
+    {
+      "matches": [
+        "https://meet.google.com/*"
+      ],
+      "js": [
+        "goguardian-6.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://staging-blocked.goguardian.com/*",
+        "https://blocked.goguardian.com/*"
+      ],
+      "js": [
+        "goguardian-7.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://staging-enroll.goguardian.com/*",
+        "https://enroll.goguardian.com/*"
+      ],
+      "js": [
+        "goguardian-8.js"
+      ],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "https://secure.aleks.com/*",
+        "*://*.erplinq.com/*",
+        "*://esd.eschooldata.com/*"
+      ],
+      "js": [
+        "goguardian-9.js"
+      ],
+      "run_at": "document_idle",
+      "match_about_blank": true
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "https://secure.aleks.com/*",
+        "*://*.erplinq.com/*",
+        "*://esd.eschooldata.com/*"
+      ],
+      "js": [
+        "goguardian-10.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "https://staging-blocked.goguardian.com/*",
+        "https://blocked.goguardian.com/*",
+        "https://secure.aleks.com/*",
+        "*://*.erplinq.com/*",
+        "*://esd.eschooldata.com/*"
+      ],
+      "js": [
+        "goguardian-11.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "match_about_blank": true
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "https://secure.aleks.com/*",
+        "*://*.erplinq.com/*",
+        "*://esd.eschooldata.com/*"
+      ],
+      "js": [
+        "goguardian-12.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "https://secure.aleks.com/*",
+        "*://*.erplinq.com/*",
+        "*://esd.eschooldata.com/*"
+      ],
+      "js": [
+        "goguardian-13.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true,
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "*://*.erplinq.com/*",
+        "*://esd.eschooldata.com/*"
+      ],
+      "js": [
+        "goguardian-14.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false,
+      "match_about_blank": true
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "*://*.erplinq.com/*",
+        "*://esd.eschooldata.com/*"
+      ],
+      "js": [
+        "goguardian-15.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false,
+      "match_about_blank": true
+    },
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.youtube.com./*",
+        "*://*.youtube-nocookie.com/*",
+        "*://*.youtube-nocookie.com./*",
+        "*://*.youtubeeducation.com/*",
+        "*://*.youtubeeducation.com./*",
+        "*://translate.googleusercontent.com/*"
+      ],
+      "js": [
+        "goguardian-16.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.youtube.com./*",
+        "*://*.youtube-nocookie.com/*",
+        "*://*.youtube-nocookie.com./*",
+        "*://*.youtubeeducation.com/*",
+        "*://*.youtubeeducation.com./*",
+        "*://translate.googleusercontent.com/*"
+      ],
+      "js": [
+        "goguardian-17.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "https://secure.aleks.com/*",
+        "*://*.erplinq.com/*",
+        "*://esd.eschooldata.com/*"
+      ],
+      "js": [
+        "goguardian-18.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true,
+      "match_about_blank": true
+    },
+    {
+      "matches": [
+        "*://gemini.google.com/*",
+        "*://notebooklm.google.com/*",
+        "*://notebook.google.com/*",
+        "*://chatgpt.com/*",
+        "*://openai.com/*",
+        "*://copilot.microsoft.com/*",
+        "*://google.com/search*",
+        "*://www.google.com/search*"
+      ],
+      "js": [
+        "goguardian-19.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "exclude_matches": [
+        "https://secure.aleks.com/*",
+        "*://*.erplinq.com/*",
+        "*://esd.eschooldata.com/*"
+      ],
+      "js": [
+        "goguardian-20.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "goguardian-22.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "*://google.com/",
+        "*://www.google.com/",
+        "*://google.com/?*",
+        "*://www.google.com/?*",
+        "*://google.com/webhp*",
+        "*://www.google.com/webhp*",
+        "*://google.com/search*",
+        "*://www.google.com/search*"
+      ],
+      "js": [
+        "goguardian-23.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "alarms",
+    "background",
+    "enterprise.deviceAttributes",
+    "identity",
+    "identity.email",
+    "idle",
+    "management",
+    "nativeMessaging",
+    "notifications",
+    "offscreen",
+    "scripting",
+    "storage",
+    "system.cpu",
+    "system.memory",
+    "tabs",
+    "unlimitedStorage",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "oauth2": {
+    "client_id": "1022294148666-ecrhf33feoo7cp7vtccfh616ol6cq1m5.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDPdMH1s/Pt9zfEC6GU2YAky8AtlEeTgKWRZPt5MNMRCz4tp1l5zVnNj12ZFT/7ujt7zND5JL5ucGlsQBSV6GlZHN/ZpP3n6RadQUsGG9IRjvxtUYh2h1hc1GMFAe+E3yLYC9NvgxRbOS3Xdphv0JwokgGXov2oJjledjctWGDluQIDAQAB",
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "explicit-image-filter/*"
+      ],
+      "matches": [
+        "*://*/*"
+      ]
+    },
+    {
+      "resources": [
+        "icons/*"
+      ],
+      "matches": [
+        "*://*/*"
+      ]
+    }
+  ],
+  "externally_connectable": {
+    "ids": [
+      "fobcbbhcfonjdomhmmjhbnchobfebhfp"
+    ],
+    "matches": [
+      "https://staging-student.goguardian.com/*",
+      "https://student.goguardian.com/*",
+      "https://extension.goguardian/*",
+      "https://staging-checkup.goguardian.com/*",
+      "https://checkup.goguardian.com/*"
+    ]
+  },
+  "update_url": "https://ext.goguardian.com/stable.xml"
+}
